@@ -77,28 +77,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "name": "Joaquim",
-      "bread": "3 Queijos",
-      "meat": "Maminha",
-      "optionals": [
-        "Bacon",
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "name": "Joaquim alvez",
-      "bread": "3 Queijos",
-      "meat": "Maminha",
-      "optionals": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    }
-  ]
+  "burgers": []
 }

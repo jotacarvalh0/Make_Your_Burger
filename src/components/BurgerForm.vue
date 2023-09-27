@@ -1,5 +1,5 @@
 <template>
-    <p>Componente de Mensagem</p>
+    <Message :msg="msg" v-show="msg" />
     <div>
         <form id="burger-form" @submit="createBurger">
             <div class="input-container">
@@ -41,9 +41,11 @@
 </template>
 
 <script>
+import Message from './Message.vue'
+
 export default {
     name: 'BurgerForm',
-    data () {
+    data() {
         return {
             breads: null,
             meats: null,
@@ -53,47 +55,50 @@ export default {
             meat: null,
             optionals: [],
             msg: null,
-        }
+        };
+    },
+    components: {
+        Message,
     },
     methods: {
         async getIngredients() {
-
-            const req = await fetch("http://localhost:3000/ingredientes")
-            const data = await req.json()
-
-            this.breads = data.paes
-            this.meats = data.carnes
-            this.optionalsdata = data.opcionais
+            const req = await fetch("http://localhost:3000/ingredientes");
+            const data = await req.json();
+            this.breads = data.paes;
+            this.meats = data.carnes;
+            this.optionalsdata = data.opcionais;
         },
         async createBurger(e) {
-            e.preventDefault()
-
+            e.preventDefault();
             const data = {
                 name: this.name,
                 bread: this.bread,
                 meat: this.meat,
                 optionals: Array.from(this.optionals),
                 status: "Solicitado",
-                
-            }
-            const dataJson = JSON.stringify(data)
-            
+            };
+            const dataJson = JSON.stringify(data);
             const req = await fetch("http://localhost:3000/burgers", {
                 method: "POST",
-                headers: { "Content-Type": "application/json"},
+                headers: { "Content-Type": "application/json" },
                 body: dataJson
-            }) 
+            });
 
-            const res = await req.json()
+            const res = await req.json();
+            this.msg = "Pedido realizado com sucesso"
 
-            //colocar uma msg de sistemas
+            setTimeout(() => this.msg = "", 3000)
 
-            // limpar os campos
+            this.name = ""
+            this.meats = ""
+            this.breads = ""
+            this.optionals = ""
         }
     },
     mounted() {
-        this.getIngredients()
-    }
+        this.getIngredients();
+    },
+    components: { Message }
 }
 </script>
 
