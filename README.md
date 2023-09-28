@@ -17,6 +17,7 @@ npm run backend
 
 ### Compiles and minifies for production
 ```
+npm install json-server
 npm run build
 ```
 ### Documentation
