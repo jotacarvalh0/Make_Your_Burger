@@ -77,5 +77,29 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "name": "Jota",
+      "bread": "Integral",
+      "meat": "Alcatra",
+      "optionals": [
+        "Cheddar",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "name": "José",
+      "bread": "Italiano Branco",
+      "meat": "Picanha",
+      "optionals": [
+        "Bacon",
+        "Salame",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    }
+  ]
 }
