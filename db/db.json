@@ -79,27 +79,18 @@
   ],
   "burgers": [
     {
-      "name": "Jota",
-      "bread": "Integral",
-      "meat": "Alcatra",
-      "optionals": [
-        "Cheddar",
-        "Pepino"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
       "name": "José",
-      "bread": "Italiano Branco",
-      "meat": "Picanha",
+      "bread": "3 Queijos",
+      "meat": "Maminha",
       "optionals": [
         "Bacon",
         "Salame",
-        "Cebola roxa"
+        "Cebola roxa",
+        "Cheddar",
+        "Tomate"
       ],
       "status": "Solicitado",
-      "id": 2
+      "id": 1
     }
   ]
 }
