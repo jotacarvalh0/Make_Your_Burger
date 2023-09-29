@@ -80,14 +80,10 @@
   "burgers": [
     {
       "name": "José",
-      "bread": "3 Queijos",
-      "meat": "Maminha",
+      "bread": "Italiano Branco",
+      "meat": "Alcatra",
       "optionals": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa",
-        "Cheddar",
-        "Tomate"
+        "Bacon"
       ],
       "status": "Solicitado",
       "id": 1
